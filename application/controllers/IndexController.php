@@ -1,5 +1,10 @@
 <?php
-
+//application/controllers/IndexController.php
+/*
+ * Author : Se som
+ * Date : 1-10-2013
+ * 
+ */
 class IndexController extends Zend_Controller_Action
 {
 

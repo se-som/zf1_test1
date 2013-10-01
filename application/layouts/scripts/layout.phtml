@@ -8,7 +8,10 @@ echo $this->doctype(); ?>
 <head>
     <?php echo $this->headMeta(); ?> 
     <?php echo $this->headTitle(); ?>
-    <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/css/site.css'); ?> 
+	<?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/bootstrap/css/bootstrap.css'); ?> 
+	<?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/bootstrap/css/bootstrap.min.css'); ?> 
+	<?php echo $this->headScript()->appendFile('/bootstrap/js/bootstrap.js');?>
+	<?php echo $this->headScript()->appendFile('/bootstrap/js/bootstrap.min.js');?>
 </head>
 <body>
 <div id="content">
