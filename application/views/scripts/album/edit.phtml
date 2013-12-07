@@ -1,0 +1,40 @@
+<?php 
+//application/views/scripts/index/edit.phtml
+/*
+ * Author : Se som
+ * Date : 1-10-2013
+ * 
+ */
+foreach ($this->getAlbum as $album){
+	
+}
+?>
+    <form class="form-horizontal" name="editAlbum" id="editAlbum" 
+		  class="main" method="post" 
+		  action="<?php echo $this->baseUrl(); ?>/album/edit" >
+		<div class="control-group">
+			<div class="controls">
+				<input type="hidden" name="id" 
+					   value="<?php echo $album['id'] ?>">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputTitle">Title</label>
+			<div class="controls">
+				<input type="text" name="title" id="inputEmail" placeholder="Title" 
+					   value="<?php echo $album['title'] ?>">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputArtist">Artist</label>
+			<div class="controls">
+				<input type="text" name="artist" id="inputPassword" placeholder="Artist"
+					   value="<?php echo $album['artist'] ?>">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit" class="btn">Sign in</button>
+			</div>
+		</div>
+    </form>

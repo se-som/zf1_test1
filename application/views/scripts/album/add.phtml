@@ -1,0 +1,29 @@
+<?php 
+//application/views/scripts/index/add.phtml
+/*
+ * Author : Se som
+ * Date : 1-10-2013
+ * 
+ */
+?>
+    <form class="form-horizontal" name="addAlbum" id="addAlbum" 
+		  class="main" method="post" 
+		  action="<?php echo $this->baseUrl(); ?>/album/add" >
+		<div class="control-group">
+			<label class="control-label" for="inputTitle">Title</label>
+			<div class="controls">
+				<input type="text" name="title" id="inputEmail" placeholder="Title">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="inputArtist">Artist</label>
+			<div class="controls">
+				<input type="text" name="artist" id="inputPassword" placeholder="Artist">
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<button type="submit" class="btn">Sign in</button>
+			</div>
+		</div>
+    </form>

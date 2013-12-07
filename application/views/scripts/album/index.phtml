@@ -1,0 +1,36 @@
+<?php
+//application/views/scripts/album/index.phtml
+/*
+ * Author : Se som
+ * Date : 1-10-2013
+ * 
+ */
+
+$this->title = "My Albums";
+$this->headTitle($this->title);
+?>
+<p><a href="<?php echo $this->url(array('controller' => 'album',
+	'action' => 'add'));
+?>">Add new album</a></p>
+<table class="table table-hover">
+	<tr>
+		<th>Title</th>
+		<th>Artist</th>
+		<th>Edit</th>
+		<th>&nbsp;</th>
+	</tr>
+<?php foreach ($this->tbAlbums as $album) : ?>
+		<tr>
+			<td><?php echo $album['title']; ?></td>
+			<td><?php echo $album['artist']; ?></td>
+			<td>
+				<a href="<?php echo $this->url(array('controller' => 'album',
+					'action' => 'edit', 'id' => $album['id']));?>">Edit
+				</a>
+				<a href="<?php echo $this->url(array('controller' => 'album',
+					'action' => 'delete', 'id' => $album['id']));?>">Delete
+				</a>
+			</td>  
+		</tr>
+<?php endforeach; ?>
+</table>
